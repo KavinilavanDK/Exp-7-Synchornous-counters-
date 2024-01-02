@@ -1,14 +1,14 @@
-### Name: KAVI NILAVAN D K
+### Name: KAVINILAVAN DK
 ### Roll No: 23014025
-# Experiment 06: Synchronous counters- Up counter and Down counter
+# Experiment 06: Synchronous counters: Up counter and Down counter
 # AIM
-To implement 4 bit up and down counters and validate functionality.
+To implement 3 bit up and down counters and validate functionality.
 # Equipments Required:
 Hardware: PC, Cyclone II , USB flasher
 Software: Quartus prime
 # Theory
 ## UP COUNTER 
-The counter is a digital sequential circuit and here it is a 4 bit counter, which simply means it can count from 0 to 15 and vice versa based upon the direction of counting (up/down). 
+The counter is a digital sequential circuit and here it is a 3 bit counter, which simply means it can count from 0 to 7 and vice versa based upon the direction of counting (up/down). 
 
 The counter (“count“) value will be evaluated at every positive (rising) edge of the clock (“clk“) cycle.
 The Counter will be set to Zero when “reset” input is at logic high.
@@ -29,13 +29,14 @@ Note that each bit in this four-bit sequence toggles when the bit before it (the
 
 Starting with four J-K flip-flops connected in such a way to always be in the “toggle” mode, we need to determine how to connect the clock inputs in such a way so that each succeeding bit toggles when the bit before it transitions from 1 to 0.
 
-The Q outputs of each flip-flop will serve as the respective binary bits of the final, four-bit count:
+The Q outputs of each flip-flop will serve as the respective binary bits of the final, three-bit count:
 
  
  
 
-Four-bit “Up” Counter
-![image](https://user-images.githubusercontent.com/36288975/169644758-b2f4339d-9532-40c5-af40-8f4f8c942e2c.png)
+Three-bit “Up” Counter
+![Sync  3 bit upcounters](https://github.com/amal-2006/Exp-7-Synchornous-counters-/assets/148410730/202d0298-dd85-4290-9cf5-39a6bd0c4cbc)
+
 
 
 
@@ -43,11 +44,14 @@ Four-bit “Up” Counter
 
 As well as counting “up” from zero and increasing or incrementing to some preset value, it is sometimes necessary to count “down” from a predetermined value to zero allowing us to produce an output that activates when the zero count or some other pre-set value is reached.
 
-This type of counter is normally referred to as a Down Counter, (CTD). In a binary or BCD down counter, the count decreases by one for each external clock pulse from some preset value. Special dual purpose IC’s such as the TTL 74LS193 or CMOS CD4510 are 4-bit binary Up or Down counters which have an additional input pin to select either the up or down count mode.
-![image](https://user-images.githubusercontent.com/36288975/169644844-1a14e123-7228-4ed8-81a9-eb937dff4ac8.png)
+This type of counter is normally referred to as a Down Counter, (CTD). In a binary or BCD down counter, the count decreases by one for each external clock pulse from some preset value. Special dual purpose IC’s such as the TTL 74LS193 or CMOS CD4510 are 3-bit binary Up or Down counters which have an additional input pin to select either the up or down count mode.
+
+![Sync  3 bit downcounters](https://github.com/amal-2006/Exp-7-Synchornous-counters-/assets/148410730/2002a343-de4a-4282-9f92-cb17b4076a9b)
 
 
-4-bit Count Down Counter
+
+
+3-bit Count Down Counter
 
 
 # Procedure
@@ -106,22 +110,19 @@ end
 
 # RTL realisation
 ### UP COUNTER
-
-![UP COUNTER](https://github.com/KavinilavanDK/Exp-7-Synchornous-counters-/assets/144870429/6db63e92-e775-4ae7-b03e-20032d611f52)
+![Exp 6 UC RTL](https://github.com/amal-2006/Exp-7-Synchornous-counters-/assets/148410730/daae41e1-7e3f-4f37-abdf-0f9d6f1e21ea)
 
 
 ### DOWN COUNTER
-![DOWN COUNTER](https://github.com/KavinilavanDK/Exp-7-Synchornous-counters-/assets/144870429/94ca30b1-9504-4b26-81bd-194747f7ec3d)
-
+![Exp 6 DC RTL](https://github.com/amal-2006/Exp-7-Synchornous-counters-/assets/148410730/a6a771ed-4039-49f3-a335-4b0e7dc5409d)
 
 
 # Truth Table
 ### UP COUNTER
-![up truth](https://github.com/KavinilavanDK/Exp-7-Synchornous-counters-/assets/144870429/09d18c40-6896-4aab-9d43-3a392a7f3957)
+![Exp 6 UC Truth Table](https://github.com/amal-2006/Exp-7-Synchornous-counters-/assets/148410730/b94207e2-8bd7-46eb-adbd-9099c856823c)
 
 ### DOWN COUNTER
-![down truth](https://github.com/KavinilavanDK/Exp-7-Synchornous-counters-/assets/144870429/17084aa0-75b1-43f0-afa4-3fa33bf79b3d)
-
+![Exp 6 DC Truth Table](https://github.com/amal-2006/Exp-7-Synchornous-counters-/assets/148410730/5de2a377-f527-4dd1-9bf5-4a3c1cd286bc)
 
 
 
@@ -130,12 +131,11 @@ end
 
 # Timing Diagram 
 ### UP COUNTER
-![UP TIMING](https://github.com/KavinilavanDK/Exp-7-Synchornous-counters-/assets/144870429/0319d5f3-c733-4ce5-b22c-85f18ddbf617)
-
+![Exp 6 UC Timing Diagram](https://github.com/amal-2006/Exp-7-Synchornous-counters-/assets/148410730/3251ccc3-90a1-4c63-8e50-457e2efc574e)
 
 ### DOWN COUNTER
-![DOWN TIMING](https://github.com/KavinilavanDK/Exp-7-Synchornous-counters-/assets/144870429/207f4e63-9ef0-4295-812f-ad84b67852ec)
+![Exp 6 DC Timing Diagram](https://github.com/amal-2006/Exp-7-Synchornous-counters-/assets/148410730/bb49bf33-b767-49b7-8606-38380e0486a0)
 
 
 ### RESULTS
-Thus, the flipflops are implemented using verilog.
+Thus, the flipflops are implemented using verilog.
